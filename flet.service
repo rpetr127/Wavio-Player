@@ -1,0 +1,13 @@
+[Unit]
+Description=Wavio Player
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/root/Wavio-Player
+Environment="PATH=/root/.virtualenvs/flet_env/bin"
+ExecStart=/root/.virtualenvs/flet_env/bin/python /root/Wavio-Player/main.py
+
+[Install]
+WantedBy=multi-user.target
